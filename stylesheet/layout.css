@@ -1,0 +1,91 @@
+body{
+    background-color:rgb(12, 12, 12)
+}
+
+
+.background{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgba(26, 25, 25, 0.329),rgba(138, 56, 192, 0.384));
+    background-repeat: no-repeat;
+    filter:blur(300px);
+    position: relative;
+    overflow: hidden;
+}
+
+
+.figure1{
+    width: 60vw;
+    height: 50vw;
+    background-image: url("../img/1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: -4.6%;
+    top: -4%;
+    opacity: 0.8;
+    animation: rotating 35s linear infinite;
+    transform-origin: 100% 50%;
+}
+
+
+.figure2{
+    width: 60vw;
+    height: 50vw;
+    background-image: url("../img/2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: -4%;
+    top: -10.5%;
+    opacity: 0.8;
+    animation: rotating 35s linear infinite;
+    transform-origin: 50% 50%;
+}
+
+.figure3{
+    width: 60vw;
+    height: 50vw;
+    background-image: url("../img/3.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: -7.5%;
+    top: 40.5%;
+    opacity: 0.8;
+    animation: rotating 35s linear infinite;
+    transform-origin: 100% 50%;
+}
+
+
+.active-figure{
+    width: 60vw;
+    height: 50vw;
+    background-image: url("../img/4.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.8;
+    /* transition: transform 0.1s ease-in; */
+ 
+}
+
+
+
+
+
+
+
+
+
+
+@keyframes rotating {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
