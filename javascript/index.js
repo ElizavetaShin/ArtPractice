@@ -20,9 +20,9 @@ function updateActiveFigure (){
     })
 }
 function updateCursorCircle (){
-    cursorCircleX  += (clientX - cursorCircleX )/30;
-    cursorCircleY  += (clientY - cursorCircleY)/30;
-    cursorCircle.style.transform = `translate(${Math.round(cursorCircleX)}px,${Math.round(cursorCircleY)}px)`;
+    cursorCircleX  += (clientX - cursorCircleX )/6;
+    cursorCircleY  += (clientY - cursorCircleY)/6;
+    cursorCircle.style.transform = `translate(-50%, -50%) translate(${Math.round(cursorCircleX)}px,${Math.round(cursorCircleY)}px)`;
     requestAnimationFrame (()=>{
          updateCursorCircle ()
     })

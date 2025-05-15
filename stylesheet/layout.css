@@ -78,6 +78,8 @@ body{
     height: 100vh;
     position: absolute;
     overflow: hidden;
+    left: 0;
+    top: 0;
 }
 
 
@@ -89,6 +91,8 @@ body{
     background-color: beige;
     left: 0;
     top: 0;
+    transform-origin: 50% 50%;
+    pointer-events: none;
 }
 
 
