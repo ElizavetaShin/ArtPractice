@@ -1,5 +1,8 @@
+@import "fonts.css";
+
 body{
-    background-color:rgb(31, 31, 31)
+    background-color:rgb(31, 31, 31);
+    font-family: "Circe";
 }
 
 
@@ -9,8 +12,12 @@ body{
     background: rgb(0, 0, 0);
     background-repeat: no-repeat;
     filter:blur(100px);
-    position: relative;
+    position: fixed;
     overflow: hidden;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: -1;
 }
 
 
@@ -76,7 +83,7 @@ body{
 .cursor-zone {
      width: 100vw;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     overflow: hidden;
     left: 0;
     top: 0;
@@ -97,6 +104,34 @@ body{
 }
 
 
+
+
+.navbar {
+    display: flex;
+    padding: 67px 50px;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+}
+
+
+.links {
+    display: flex;
+    padding: 0 13px;
+    gap: 44px;
+    align-items: center;
+}
+
+
+.links > a {
+    text-decoration: none;
+    color: rgb(190, 190, 190);
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+
 /* h1 {
     font-size: 40px;
     line-height: 58px;
@@ -111,8 +146,7 @@ h3 {
     font-size: 24px;
     line-height: 30px;
 } */
-
-
+ 
 
 
 
