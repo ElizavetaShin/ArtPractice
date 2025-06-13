@@ -7,7 +7,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 167px;
+    /* gap: 167px; */
 }
 
 .research-slogan {
@@ -15,35 +15,63 @@ body {
     font-size: 64px;
     line-height: 60px;
     font-weight: 300;
-    margin-top: 371px;
-    margin-bottom: 333px;
+    margin-top: 385px;
+    margin-bottom: 486px;
 }
+
+.research-title-container{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 90px;
+
+}
+
 
 .research-title {
     width: 100%;
-    text-align: end;
+    text-align: left;
     font-size: 64px;
     line-height: 60px;
     font-weight: 300;
-    margin-bottom: 40px;
 }
+
+
+.research-cards-container{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 150px;
+    width: 100%;
+}
+
 
 .research-card {
     display: flex;
     justify-content: space-between;
-    gap: 136px;
+    /* gap: 136px; */
     align-items: center;
-    height: 555px;
+    height: 624px;
+    background-color: rgba(76, 76, 76, 0.1);
+    padding: 43px 43px;
+    border-radius: 30px;
+    backdrop-filter: blur (13px);
+    border-top: 1px solid rgba(116, 116, 116, 0.466);
+    border-left: 1px solid rgba(116, 116, 116, 0.466);
+    border-right: 1px solid rgba(87, 87, 87, 0.301);
+    border-bottom: 1px solid rgba(100, 100, 100, 0.301);
+   
 }
 
 .research-card-info {
     display: flex;
     flex-direction: column;
-    gap: 80px;
-    justify-content: space-between;
+    gap: 45px;
+    justify-content: start;
     align-items: start;
-    width: 532px;
+    width: 529px;
     height: 100%;
+    
 
 }
 
@@ -51,16 +79,158 @@ body {
      font-size: 40px;
      line-height: 40px;
      font-weight: 300;
+     letter-spacing: -0.01em;
     
 }
 
 .research-card-info-text {
      font-size: 24px;
-     line-height: 32px;
+     line-height: 28.8px;
      font-weight: 300;
+     letter-spacing: -0.01em;
+
+     
 }
 
 .research-card-image {
     border-radius: 30px;
+    max-width: 1079px;
+    height: 100%;
     
+}
+
+
+.star-divider {
+    height: 63px;
+    width: 68px;
+    background-image: url('../img/Star.svg');
+    background-size: contain;
+    background-position: center;
+    align-self: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.research-card-button {
+    width: 291px;
+    height: 82px;
+    border-radius: 66px;
+    background-color: rgba(0, 0, 0, 0.36);
+    line-height: 40px;
+    font-size: 40px;
+    font-weight: 300;
+    border-top: 1px solid rgba(116, 116, 116, 0.466);
+    border-left: 1px solid rgba(116, 116, 116, 0.466);
+    border-right: 1px solid rgba(87, 87, 87, 0.301);
+    border-bottom: 1px solid rgba(100, 100, 100, 0.301);
+    justify-self: end;
+    margin-top: auto;
+}
+
+.research-card-button:active {
+    background-color: rgba(99, 99, 99, 0.36);
+}
+
+
+.signs-zone {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+}
+
+/* .sign {
+    height: 60px;
+    width: 72px;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    background-repeat: no-repeat;
+}
+
+.sign:nth-child(1) {
+    background-image: url(../img/sign1.png);
+    top: 25%;
+    left: 10%;
+    animation: SignsAnimation1 5s linear infinite;
+}
+
+.sign:nth-child(2) {
+    background-image: url(../img/sign2.png);
+    top: 8%;
+    left: 25%;
+    animation: SignsAnimation2 5s linear infinite;
+}
+
+.sign:nth-child(3) {
+    background-image: url(../img/sign3.png);
+    top: 30%;
+    left: 50%;
+    animation: SignsAnimation1 5s linear infinite;
+}
+
+.sign:nth-child(4) {
+    background-image: url(../img/sign4.png);
+    top: 8%;
+    left: 70%;
+    animation: SignsAnimation2 5s linear infinite;
+}
+
+.sign:nth-child(5) {
+    background-image: url(../img/sign5.png);
+    top: 25%;
+    left: 90%;
+    animation: SignsAnimation1 5s linear infinite;
+}
+
+.sign:nth-child(6) {
+    background-image: url(../img/sign6.png);
+    top: 80%;
+    left: 10%;
+    animation: SignsAnimation2 5s linear infinite;
+}
+
+.sign:nth-child(7) {
+    background-image: url(../img/sign7.png);
+    top: 90%;
+    left: 40%;
+    animation: SignsAnimation1 5s linear infinite;
+}
+
+.sign:nth-child(8) {
+    background-image: url(../img/sign8.png);
+    top: 70%;
+    left: 90%;
+    animation: SignsAnimation2 5s linear infinite;
+} */
+
+
+
+
+@keyframes SignsAnimation1 {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes SignsAnimation2 {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.5;
+    }
 }

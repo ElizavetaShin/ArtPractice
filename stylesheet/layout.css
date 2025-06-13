@@ -3,6 +3,7 @@
 body{
     background-color:rgb(31, 31, 31);
     font-family: "Circe";
+
 }
 
 
@@ -11,7 +12,7 @@ body{
     height: 100vh;
     background: rgb(0, 0, 0);
     background-repeat: no-repeat;
-    filter:blur(100px);
+    filter:blur(200px);
     position: fixed;
     overflow: hidden;
     top: 0;
@@ -93,10 +94,14 @@ body{
 
 .cursor-circle {
     position: absolute;
-    height: 10px;
-    width: 10px;
+    height: 15px;
+    width: 15px;
     border-radius: 50%;
-    background-color: rgb(202, 144, 197);
+    /* background-color: rgb(202, 144, 197); */
+    background-image: url('../img/Star.svg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
     left: 0;
     top: 0;
     transform-origin: 50% 50%;
@@ -108,18 +113,27 @@ body{
 
 .navbar {
     display: flex;
-    padding: 67px 50px;
-    justify-content: end;
+    padding: 30px 50px;
+    justify-content: center;
     align-items: center;
     width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
 }
 
 
 .links {
     display: flex;
-    padding: 0 13px;
+    padding: 22px 43px;
     gap: 44px;
     align-items: center;
+    border-radius: 30px;
+    background-color: rgba(76, 76, 76, 0.1);
+     border-top: 1px solid rgba(116, 116, 116, 0.466);
+    border-left: 1px solid rgba(116, 116, 116, 0.466);
+    border-right: 1px solid rgba(87, 87, 87, 0.301);
+    border-bottom: 1px solid rgba(100, 100, 100, 0.301);
 }
 
 
@@ -147,7 +161,6 @@ h3 {
     line-height: 30px;
 } */
  
-
 
 
 
