@@ -36,20 +36,56 @@ updateCursorCircle ();
 
 
 
-function animateSignRotating (signElement, x0, y0, r, speed, isForward){
+function animateSignRotating (signElement, x0, y0, r, speed, startDeg, isForward){
     let prevTime = performance.now();
-    signElement.style.left = x0;
-    signElement.style.top = y0;
+    let deg = startDeg;
+    let coef = isForward ? 1 : -1;
+    signElement.style.left = x0+'px';
+    signElement.style.top = y0+'px';
+    speed = speed/1000;
 
-
-    requestAnimationFrame ((time)=>{
+    requestAnimationFrame (function rotating(time){
+        
        let timeSincePrev = time-prevTime;
-       let deg = timeSincePrev*speed*Math.PI/180;
-       let xValue = +signElement.style.translate.split('px')[0].trim();
-       let yValue = +signElement.style.translate.split('px')[1].trim();   
-       let x = x0 + r*Math.cos(deg);
-       let y = y0 + r*Math.sin(deg);
+       deg = (coef*timeSincePrev*speed + deg) % 360;
+       let radians = deg*Math.PI/180;
+       let x = x0 + r*Math.cos(radians);
+       let y = y0 + r*Math.sin(radians);
        signElement.style.translate = `${x-x0}px ${y-y0}px`
        prevTime = time;
+       requestAnimationFrame (rotating);
     })
 }
+
+
+let signsZone = document.getElementById('signs-zone');
+let signsArr = [];
+let reverseSignsArr = [];
+let signsAmount = 17;
+let reverseSignsAmount = 14;
+
+for(let i = 0; i<signsAmount; i++){
+    let sign = document.createElement('div');
+    sign.classList.add('sign');
+    sign.style.backgroundImage = `url('../img/sign${i+1}.png')`;
+    signsArr.push(sign);
+    signsZone.append(sign);
+}
+
+
+for(let i = 0; i<reverseSignsAmount; i++){
+      let sign = document.createElement('div');
+    sign.classList.add('sign');
+    sign.style.backgroundImage = `url('../img/sign${reverseSignsAmount - i}.png')`;
+    reverseSignsArr.push(sign);
+    signsZone.append(sign);
+}
+
+
+signsArr.forEach((element, index)=>{
+    animateSignRotating(element, window.innerWidth*1.12, window.innerWidth*0.34, window.innerWidth*0.4, 10, index*360/signsAmount, true);
+})
+
+reverseSignsArr.forEach((element, index)=>{
+    animateSignRotating(element, window.innerWidth*1.12, window.innerWidth*0.34, window.innerWidth*0.32, 8, index*360/reverseSignsAmount, false);
+})
