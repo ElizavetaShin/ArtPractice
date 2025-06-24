@@ -114,35 +114,37 @@ body{
 
 .navbar {
     display: flex;
-    padding: 30px 50px;
+    padding: 1.56vw 2.6vw;
     justify-content: center;
     align-items: center;
     width: 100%;
     position: sticky;
     top: 0;
     left: 0;
+    z-index: 2;
 }
 
 
 .links {
     display: flex;
-    padding: 22px 43px;
-    gap: 44px;
+    padding: 1.15vw 2.24vw;
+    gap: 2.29vw;
     align-items: center;
-    border-radius: 30px;
+    border-radius: 1.56vw;
     background-color: rgba(76, 76, 76, 0.1);
-     border-top: 1px solid rgba(116, 116, 116, 0.466);
+    border-top: 1px solid rgba(116, 116, 116, 0.466);
     border-left: 1px solid rgba(116, 116, 116, 0.466);
     border-right: 1px solid rgba(87, 87, 87, 0.301);
     border-bottom: 1px solid rgba(100, 100, 100, 0.301);
+    backdrop-filter: blur(8px);
 }
 
 
 .links > a {
     text-decoration: none;
     color: rgb(190, 190, 190);
-    font-size: 20px;
-    line-height: 22px;
+    font-size: 1.04vw;
+    line-height: 1.15vw;
     font-weight: 400;
 }
 
