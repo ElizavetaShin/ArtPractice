@@ -4,7 +4,7 @@ body {
 }
 
 .research-container{
-    padding: 0 80px;
+    padding: 0 4.16vw;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -28,6 +28,14 @@ body {
 
 }
 
+.research-title-container-two{
+    display: flex;
+    gap: 1.04vw;
+    align-items: center;
+    margin-bottom: 12.5vw;
+
+}
+
 
 .research-title {
     width: 100%;
@@ -37,6 +45,14 @@ body {
     font-weight: 300;
 }
 
+.research-title-two {
+    width: 100%;
+    text-align: left;
+    font-size: 3.33vw;
+    line-height: 3.125vw;
+    font-weight: 300;
+    margin-top: 20vw;
+}
 
 .research-cards-container{
     display: flex;
@@ -54,6 +70,15 @@ body {
     width: 69.6vw;
 }
 
+.research-sign-cards-container{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 2.60vw;
+    width: 22.03vw;
+    /* height: 11.63vw; */
+}
+
 .research-card {
     display: flex;
     justify-content: space-between;
@@ -69,7 +94,8 @@ body {
     border-right: 1px solid rgba(87, 87, 87, 0.301);
     border-bottom: 1px solid rgba(100, 100, 100, 0.301);
     z-index: 1;
-   
+   /* transform: scale(1.08); */
+   filter: blur(6px);
 }
 
 .research-small-card {
@@ -79,7 +105,7 @@ body {
     align-items: center;
     height: 29.3vw;
     background-color: rgba(76, 76, 76, 0.1);
-    padding: 1.98vw;
+    padding: 2.08vw;
     border-radius: 1.56vw;
     backdrop-filter: blur(13px);
     border-top: 1px solid rgba(116, 116, 116, 0.466);
@@ -90,13 +116,31 @@ body {
    
 }
 
+.research-sign-card {
+    display: flex;
+    justify-content: center;
+    /* gap: 136px; */
+    align-items: center;
+    height: 16.93vw;
+    background-color: rgba(76, 76, 76, 0.1);
+    border-radius: 1.56vw;
+    backdrop-filter: blur(13px);
+    border-top: 1px solid rgba(116, 116, 116, 0.466);
+    border-left: 1px solid rgba(116, 116, 116, 0.466);
+    border-right: 1px solid rgba(87, 87, 87, 0.301);
+    border-bottom: 1px solid rgba(100, 100, 100, 0.301);
+    z-index: 1;
+   
+}
+
+
 .research-card-info {
     display: flex;
     flex-direction: column;
     gap: 2.6vw;
     justify-content: start;
     align-items: start;
-    width: 30.1%;
+    width: 27.24vw;
     height: 100%;
     
 
@@ -108,7 +152,7 @@ body {
     gap: 2.34vw;
     justify-content: start;
     align-items: start;
-    width: 32.1%;
+    width: 22.34vw;
     height: 100%;
     
 
@@ -123,6 +167,16 @@ body {
     
 }
 
+.sign-text {
+     font-size: 2.08vw;
+     line-height: 2.08vw;
+     font-weight: 300;
+     letter-spacing: -0.01em;
+     text-align: center;
+     
+    
+}
+
 .research-small-card-info-title {
      font-size: 2.08vw;
      line-height: 2.08vw;
@@ -132,7 +186,13 @@ body {
     
 }
 
-
+.research-sign-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12.5vw;
+}
 
 .research-small-card-info-title-container {
     display: flex;
@@ -169,15 +229,36 @@ body {
 
 .research-card-image {
     border-radius: 1.56vw;
-    width: 61.37%;
-    height: 100%;
+    width: 55.6vw;
+    height: 28.9vw;
     
 }
 
 .research-small-card-image {
     border-radius: 1.56vw;
-    width: 58.85%;
-    height: 100%;
+    width: 41vw;
+    height: 25.42vw;
+    
+}
+
+.research-bottle-card-image {
+    /* border-radius: 1.56vw; */
+    width: 11.56vw;
+    height: 13.39vw;
+    
+}
+
+.research-shield-card-image {
+    /* border-radius: 1.56vw; */
+    width: 12.14vw;
+    height: 13.70vw;
+    
+}
+
+.research-crystal-card-image {
+    /* border-radius: 1.56vw; */
+    width: 12.29vw;
+    height: 13.49vw;
     
 }
 
@@ -192,6 +273,17 @@ body {
     background-repeat: no-repeat;
 }
 
+
+.star-divider-two {
+    height: 3.28vw;
+    width: 3.54vw;
+    background-image: url('../img/Star.svg');
+    background-size: contain;
+    background-position: center;
+    align-self: center;
+    background-repeat: no-repeat;
+    margin-top: 20vw;
+}
 
 
 .research-card-button {

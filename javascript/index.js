@@ -114,3 +114,29 @@ animateSignsCircle(circleCenterX, circleCenterY, smallCircleRadius, smallCircleS
 reverseSignsArr.forEach((element, index)=>{
     animateSignRotating(element, circleCenterX, circleCenterY, smallCircleRadius, smallCircleSpeed, index*360/reverseSignsAmount, false);
 })
+
+
+
+
+let researchCardsContainer = document.getElementById('research-cards-container');
+let researchCardsArr = researchCardsContainer.querySelectorAll('.research-card');
+
+window.addEventListener('scroll', (event)=>{
+    let element = researchCardsArr[0];
+    let elementRect = researchCardsArr[0].getBoundingClientRect()
+console.log (elementRect.top + elementRect.height/2, window.innerHeight);
+if(elementRect.top + elementRect.height/2 <= window.innerHeight){
+    element.style.scale = 0.5;
+}
+})
+let initialScaleAdd = 0.8;
+researchCardsArr.forEach((element)=>{
+ let elementRect = element.getBoundingClientRect()
+ element.style.scale = 1 + initialScaleAdd;
+ window.addEventListener('scroll', ()=>{
+    let currentCenter = elementRect.top + elementRect.height/2;
+    if (currentCenter<=window.innerHeight && currentCenter >= window.innerHeight/2){
+        element.style.scale = 1 + (currentCenter - window.innerHeight/2)/window.innerHeight/2*initialScaleAdd
+    }
+ })
+})
